@@ -66,4 +66,22 @@ public class MathUtils {
             findPermutions(pPermutions, digits, pPermution * 10 + digit);
         });
     }
+
+    public static boolean isArithmeticSequence(final List<Long> pNumbers) {
+        switch (pNumbers.size()) {
+            case 0:
+                return false;
+            case 1:
+            case 2:
+                return true;
+            default:
+                final long diff = pNumbers.get(1) - pNumbers.get(0);
+                for (int i = 0; i < pNumbers.size() - 1; i++) {
+                    if (diff != pNumbers.get(i + 1) - pNumbers.get(i)) {
+                        return false;
+                    }
+                }
+                return true;
+        }
+    }
 }

@@ -54,4 +54,15 @@ public class MathUtilsTest {
         assertEquals(Arrays.asList(new Long[]{123L, 132L, 213L, 231L, 312L, 321L}), MathUtils.getPermutations(321));
     }
 
+    @Test
+    public void testIsArithmeticSequence() {
+
+        assertFalse(MathUtils.isArithmeticSequence(Arrays.asList(new Long[]{})));
+        assertTrue(MathUtils.isArithmeticSequence(Arrays.asList(new Long[]{1L})));
+        assertTrue(MathUtils.isArithmeticSequence(Arrays.asList(new Long[]{1L, 2L})));
+        assertTrue(MathUtils.isArithmeticSequence(Arrays.asList(new Long[]{1L, 2L, 3L})));
+        assertTrue(MathUtils.isArithmeticSequence(Arrays.asList(new Long[]{1L, 6L, 11L, 16L, 21L})));
+        assertFalse(MathUtils.isArithmeticSequence(Arrays.asList(new Long[]{5L, 6L, 11L, 16L, 21L})));
+    }
+
 }
