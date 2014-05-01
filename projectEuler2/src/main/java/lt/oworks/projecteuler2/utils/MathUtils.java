@@ -2,6 +2,8 @@ package lt.oworks.projecteuler2.utils;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 /**
  *
@@ -40,5 +42,28 @@ public class MathUtils {
             } while (temp > 0);
             return digits;
         }
+    }
+
+    public static List<Long> getPermutations(final long pNumber) {
+        if (pNumber < 0) {
+            return null;
+        } else {
+            final Set<Long> permutions = new TreeSet<>();
+            final List<Integer> digits = toDigits(pNumber);
+            findPermutions(permutions, digits, 0);
+            return new ArrayList<>(permutions);
+        }
+    }
+
+    private static void findPermutions(final Set<Long> pPermutions, final List<Integer> pDigits, final long pPermution) {
+        if (pDigits.isEmpty()) {
+            pPermutions.add(pPermution);
+            return;
+        }
+        pDigits.stream().forEach((digit) -> {
+            final List<Integer> digits = new ArrayList<>(pDigits);
+            digits.remove(digit);
+            findPermutions(pPermutions, digits, pPermution * 10 + digit);
+        });
     }
 }

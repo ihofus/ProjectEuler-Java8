@@ -40,4 +40,18 @@ public class MathUtilsTest {
 
     }
 
+    @Test
+    public void testGetPermutations() {
+        assertNull(MathUtils.getPermutations(-1));
+
+        assertEquals(Arrays.asList(new Long[]{0L}), MathUtils.getPermutations(0));
+
+        assertEquals(Arrays.asList(new Long[]{1L}), MathUtils.getPermutations(1));
+
+        assertEquals(Arrays.asList(new Long[]{1L, 10L}), MathUtils.getPermutations(10));
+
+        assertEquals(Arrays.asList(new Long[]{123L, 132L, 213L, 231L, 312L, 321L}), MathUtils.getPermutations(123));
+        assertEquals(Arrays.asList(new Long[]{123L, 132L, 213L, 231L, 312L, 321L}), MathUtils.getPermutations(321));
+    }
+
 }
