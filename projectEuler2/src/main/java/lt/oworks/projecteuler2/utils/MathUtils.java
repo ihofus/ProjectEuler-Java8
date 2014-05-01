@@ -7,6 +7,6 @@ package lt.oworks.projecteuler2.utils;
 public class MathUtils {
 
     public static boolean isPrime(final long pPrime) {
-        return false;
+        return pPrime >= 2;
     }
 }
