@@ -11,7 +11,7 @@ import lt.oworks.projecteuler2.problems.Problem;
 public class ProblemRunner implements Runnable {
 
     @Inject
-    @Named("Problem49")
+    @Named("Problem50")
     private Problem problem;
 
     @Override
