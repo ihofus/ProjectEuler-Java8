@@ -6,6 +6,14 @@ import static org.junit.Assert.*;
 
 public class LongUtilsTest {
 	@Test
+	public void replaceDigits() throws Exception {
+/*		assertArrayEquals(new long[] { 23, 31 },LongUtils.replaceDigits(21, 3, 1)
+						   .sorted()
+		.toArray());*/
+
+	}
+
+	@Test
 	public void primes() throws Exception {
 		assertTrue(LongUtils.primes().limit(100).allMatch(LongUtils::isPrime));
 
