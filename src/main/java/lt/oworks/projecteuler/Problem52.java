@@ -1,6 +1,6 @@
-package lt.oworks.projecteuler2;
+package lt.oworks.projecteuler;
 
-import lt.oworks.projecteuler2.utils.LongUtils;
+import lt.oworks.projecteuler.utils.LongUtils;
 
 import java.util.Arrays;
 import java.util.stream.LongStream;

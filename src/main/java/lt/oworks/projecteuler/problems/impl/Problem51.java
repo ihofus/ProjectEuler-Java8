@@ -1,8 +1,8 @@
-package lt.oworks.projecteuler2.problems.impl;
+package lt.oworks.projecteuler.problems.impl;
 
-import lt.oworks.projecteuler2.problems.Problem;
-import lt.oworks.projecteuler2.utils.LongUtils;
-import lt.oworks.projecteuler2.utils.Utils;
+import lt.oworks.projecteuler.problems.Problem;
+import lt.oworks.projecteuler.utils.LongUtils;
+import lt.oworks.projecteuler.utils.Utils;
 
 import java.util.*;
 import java.util.stream.IntStream;

@@ -1,6 +1,5 @@
-package lt.oworks.projecteuler2;
+package lt.oworks.projecteuler;
 
-import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.stream.IntStream;
 

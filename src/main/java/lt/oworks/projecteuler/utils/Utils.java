@@ -1,4 +1,4 @@
-package lt.oworks.projecteuler2.utils;
+package lt.oworks.projecteuler.utils;
 
 
 import java.util.LinkedList;
